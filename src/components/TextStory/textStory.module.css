@@ -1,0 +1,18 @@
+.root {
+    display: flex;
+    justify-content: space-around;
+    height: 90vh;
+    align-items: center;
+    width: 100%;
+}
+
+.main {
+    --size: 500px;
+    width: var(--size);
+    height: var(--size);
+}
+
+.textarea {
+    padding: 1rem;
+    border-radius: 8px;
+}
