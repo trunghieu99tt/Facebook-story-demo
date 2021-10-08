@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Facebook-story-mini/static/css/main.a266e85d.chunk.css",
+    "main.js": "/Facebook-story-mini/static/js/main.f446fafc.chunk.js",
+    "main.js.map": "/Facebook-story-mini/static/js/main.f446fafc.chunk.js.map",
+    "runtime-main.js": "/Facebook-story-mini/static/js/runtime-main.b0d80f1a.js",
+    "runtime-main.js.map": "/Facebook-story-mini/static/js/runtime-main.b0d80f1a.js.map",
+    "static/js/2.925ddc30.chunk.js": "/Facebook-story-mini/static/js/2.925ddc30.chunk.js",
+    "static/js/2.925ddc30.chunk.js.map": "/Facebook-story-mini/static/js/2.925ddc30.chunk.js.map",
+    "static/js/3.5785b3a5.chunk.js": "/Facebook-story-mini/static/js/3.5785b3a5.chunk.js",
+    "static/js/3.5785b3a5.chunk.js.map": "/Facebook-story-mini/static/js/3.5785b3a5.chunk.js.map",
+    "index.html": "/Facebook-story-mini/index.html",
+    "static/css/main.a266e85d.chunk.css.map": "/Facebook-story-mini/static/css/main.a266e85d.chunk.css.map",
+    "static/js/2.925ddc30.chunk.js.LICENSE.txt": "/Facebook-story-mini/static/js/2.925ddc30.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b0d80f1a.js",
+    "static/js/2.925ddc30.chunk.js",
+    "static/css/main.a266e85d.chunk.css",
+    "static/js/main.f446fafc.chunk.js"
+  ]
+}
