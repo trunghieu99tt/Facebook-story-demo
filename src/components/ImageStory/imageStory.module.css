@@ -1,0 +1,33 @@
+.root {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    align-items: center;
+    width: 100%;
+    gap: 5rem;
+}
+
+.main {
+    --size: 500px;
+    width: var(--size);
+    height: var(--size);
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.imageForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}

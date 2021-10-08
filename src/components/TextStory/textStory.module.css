@@ -1,18 +1,46 @@
 .root {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     height: 90vh;
     align-items: center;
     width: 100%;
+    gap: 5rem;
 }
 
 .main {
     --size: 500px;
     width: var(--size);
     height: var(--size);
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
 }
 
 .textarea {
     padding: 1rem;
     border-radius: 8px;
+}
+
+.backgroundList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(32px, 1fr));
+    grid-gap: 0.5rem;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.backgroundList li {
+    list-style: none;
+    --size: 2rem;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+}
+
+.text {
+    font-size: 22px;
+    color: #fff;
 }

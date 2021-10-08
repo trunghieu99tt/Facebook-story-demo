@@ -3,6 +3,7 @@ import React, { ChangeEvent, useState } from "react";
 import { fabric } from "fabric";
 import { FabricJSCanvas, useFabricJSEditor } from "fabricjs-react";
 import TextStory from "./components/TextStory";
+import ImageStory from "./components/ImageStory";
 
 const App = () => {
     const [storyType, setStoryType] = useState<string | null>(null);
@@ -143,7 +144,8 @@ const App = () => {
                 </div>
             )}
             <FabricJSCanvas className="sample-canvas" onReady={onReady} /> */}
-            <TextStory />
+            {/* <TextStory /> */}
+            <ImageStory />
         </div>
     );
 };

@@ -1,43 +1,17 @@
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useState } from "react";
 
-import { fabric } from "fabric";
-import { FabricJSCanvas, useFabricJSEditor } from "fabricjs-react";
+import { BACKGROUND_LIST } from "../../constants";
 
 import classes from "./textStory.module.css";
-import { Object } from "fabric/fabric-impl";
 
-interface Props {}
-
-const TextStory = (props: Props) => {
-    const { editor, onReady } = useFabricJSEditor();
+const TextStory = () => {
+    const [text, setText] = useState("");
+    const [background, setBackground] = useState("#000");
 
     const onChangeText = (e: ChangeEvent<HTMLTextAreaElement>) => {
         const text = e.target.value;
-        const textObject: any = editor?.canvas._objects.find(
-            (o) => o.type === "textbox"
-        );
-        if (textObject) {
-            textObject.set("text", text);
-            editor?.canvas.renderAll();
-        }
+        setText(text);
     };
-
-    useEffect(() => {
-        if (editor) {
-            editor.canvas.add(
-                new fabric.Textbox("Type something!", {
-                    fill: "red",
-                    fontSize: 20,
-                    fontFamily: "Arial",
-                    fontWeight: "bold",
-                    textAlign: "center",
-                    name: "my-text",
-                    splitByGrapheme: true,
-                    width: 150,
-                })
-            );
-        }
-    }, [editor]);
 
     return (
         <div className={classes.root}>
@@ -47,8 +21,34 @@ const TextStory = (props: Props) => {
                     onChange={onChangeText}
                     rows={7}
                 />
+                <p>Change color</p>
+                <ul className={classes.backgroundList}>
+                    {BACKGROUND_LIST.map((color) => {
+                        return (
+                            <li
+                                onClick={() => setBackground(color)}
+                                style={{
+                                    background: color,
+                                    cursor: "pointer",
+                                    outline: `${
+                                        color === background
+                                            ? "2px solid blue"
+                                            : ""
+                                    } `,
+                                }}
+                            ></li>
+                        );
+                    })}
+                </ul>
             </aside>
-            <FabricJSCanvas className={classes.main} onReady={onReady} />
+            <div
+                className={classes.main}
+                style={{
+                    background: background,
+                }}
+            >
+                <p className={classes.text}>{text}</p>
+            </div>
         </div>
     );
 };
