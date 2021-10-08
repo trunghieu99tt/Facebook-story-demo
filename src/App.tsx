@@ -29,7 +29,7 @@ const App = () => {
     const storyView =
         data &&
         ((!data.type && <ImageStoryViewer data={data} />) ||
-            (data?.type === "image" && <TextStoryViewer data={data} />));
+            (data?.type === "text" && <TextStoryViewer data={data} />));
 
     return (
         <div className="root">
