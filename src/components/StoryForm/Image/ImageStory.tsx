@@ -3,7 +3,7 @@ import { fabric } from "fabric";
 import { FabricJSCanvas, useFabricJSEditor } from "fabricjs-react";
 
 import classes from "./imageStory.module.css";
-import { getRandomColor } from "../../utils";
+import { getRandomColor } from "../../../utils";
 
 interface Props {}
 
@@ -54,7 +54,6 @@ const ImageStory = (props: Props) => {
     const submitImage = () => {
         if (image && image.startsWith("http")) {
             fabric.Image.fromURL(image, function (img) {
-                console.log(`editor`, editor);
                 const canvasWidth = editor?.canvas.getWidth();
                 const canvasHeight = editor?.canvas.getHeight();
                 editor?.canvas.setWidth(500);
@@ -77,7 +76,7 @@ const ImageStory = (props: Props) => {
     const saveToServer = () => {
         const objects = editor?.canvas.toJSON();
         if (objects) {
-            localStorage.setItem("json", JSON.stringify(objects));
+            localStorage.setItem("data", JSON.stringify(objects));
         }
     };
 

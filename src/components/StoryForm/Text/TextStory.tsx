@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from "react";
 
-import { BACKGROUND_LIST } from "../../constants";
+import { BACKGROUND_LIST } from "../../../constants";
 
 import classes from "./textStory.module.css";
 
@@ -11,6 +11,15 @@ const TextStory = () => {
     const onChangeText = (e: ChangeEvent<HTMLTextAreaElement>) => {
         const text = e.target.value;
         setText(text);
+    };
+
+    const saveToServer = () => {
+        const data = {
+            type: "text",
+            background,
+            text,
+        };
+        localStorage.setItem("data", JSON.stringify(data));
     };
 
     return (
@@ -40,6 +49,7 @@ const TextStory = () => {
                         );
                     })}
                 </ul>
+                <button onClick={saveToServer}>Save</button>
             </aside>
             <div
                 className={classes.main}
