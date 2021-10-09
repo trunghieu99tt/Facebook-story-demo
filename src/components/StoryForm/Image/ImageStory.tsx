@@ -46,7 +46,6 @@ const ImageStory = (props: Props) => {
     };
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-        console.log(e);
         const { value } = e.target;
         setImage(value);
     };
@@ -87,6 +86,9 @@ const ImageStory = (props: Props) => {
                     <button onClick={onAddText}>Add Text</button>
                     <button onClick={changeTextColor}>Change Text Color</button>
                     <button onClick={saveToServer}>Save</button>
+                    <button onClick={deleteSelections}>
+                        Delete selections
+                    </button>
                 </aside>
             )}
 
