@@ -1,5 +1,7 @@
 # Facebook story mini
 
+See the offcial npm package [here](https://github.com/trunghieu99tt/facebook-story)
+
 Aim of this project is to create a mini version of Facebook story
 using FabricJS and ReactJS
 
